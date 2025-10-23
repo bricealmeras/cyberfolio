@@ -138,8 +138,13 @@ section.visible {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  z-index: -1;              /* ✅ passe le canvas en dessous du reste */
+  pointer-events: none;     /* ✅ évite qu'il bloque les clics */
+  background: transparent;
 }
+
 
 /* --- TEXTE TYPING --- */
 .typing {
