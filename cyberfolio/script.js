@@ -100,6 +100,12 @@ function animate() {
     p.draw();
   });
   requestAnimationFrame(animate);
+  // --- RETARD D'INITIALISATION POUR RENDU STABLE SUR PC --- //
+setTimeout(() => {
+  resizeCanvas();     // Recalcule la taille du fond animé
+  window.scrollTo(0, 0); // Replace la vue en haut
+}, 500);
+
 }
 initParticles();
 animate();
